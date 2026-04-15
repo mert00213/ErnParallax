@@ -33,7 +33,6 @@
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: rgba(204, 255, 0, 0.15) transparent;
   }
@@ -47,11 +46,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
   }
 
   #root {
-    overflow-x: hidden;
     position: relative;
   }
 
