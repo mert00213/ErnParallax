@@ -1,9 +1,11 @@
-import ErnParallax from "./ErnParallax";
+import ErnParallax from './ErnParallax'; // Dosya yolunun doğru olduğundan emin ol
 
-export default function App() {
+function App() {
   return (
-    <main>
+    <div>
       <ErnParallax />
-    </main>
-  );
+    </div>
+  )
 }
+
+export default App
