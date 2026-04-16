@@ -8,17 +8,17 @@ import {
 } from "framer-motion";
 
 /* ═══════════════════════════════════════════════════════════════
-   VERİ YAPILANDIRMASI
+   VERİ YAPILANDIRMASI (FİNAL VİDEO EN SONA ALINDI)
    ═══════════════════════════════════════════════════════════════ */
 
 const SECTIONS = [
   {
     id: "01",
-    media: "/stadvideo1.mp4",
+    media: "/stadvideo1.mp4", // İlk bölüm orijinal video ile başlıyor
     type: "video",
     year: "2026",
-    highlightStat: "45,000",
-    highlightLabel: "Maksimum Kapasite",
+    highlightStat: "120.000m²",
+    highlightLabel: "Toplam Alan",
     titleBold: "Ankara",
     titleLight: "19Mayıs",
     description: "Şehrin kalbinde yeni nesil bir atmosfer ve ekstrem performans odaklı mimari.",
@@ -56,14 +56,16 @@ const SECTIONS = [
   },
   {
     id: "04",
-    media: "/image3.jpg",
-    type: "image",
+    media: "/hero_video.mp4", // <-- YENİ SİNEMATİK VİDEO BURAYA (FİNALE) GELDİ
+    type: "video",
     titleBold: "İç Saha",
     titleLight: "Atmosferi",
     description: "Devasa akustik derinlik ve kesintisiz görüş alanıyla sahaya hükmeden odak tasarımı.",
-    buttonText: "Atmosferi hisset",
+    buttonText: "Finali hisset",
     layout: "left-focus",
     range: [0.70, 0.90, 1.0],
+    highlightStat: "45,000",
+    highlightLabel: "Maksimum Kapasite",
   },
 ];
 
@@ -71,20 +73,16 @@ const SECTIONS = [
    BİLEŞENLER
    ═══════════════════════════════════════════════════════════════ */
 
-// 1. SABİT ARAYÜZ (ERN HOLDING LOGOSU EKLENDİ)
+// 1. SABİT ARAYÜZ (ERN HOLDING LOGOSU)
 const FixedUI = () => (
   <>
-    {/* Üst Header */}
     <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 md:px-12 md:py-8 pointer-events-none">
-
-      {/* SOL ÜST: KURUMSAL LOGO ALANI */}
       <div className="flex items-center gap-5">
         <img
           src="/ern_holding.png"
           alt="Ern Holding"
           className="h-8 md:h-10 w-auto object-contain drop-shadow-md"
         />
-        {/* Logonun yanına zarif ayırıcı çizgi ve proje ismi */}
         <div className="hidden md:block h-5 w-[1px] bg-white/20" />
         <span className="hidden md:block text-white/50 font-light text-[9px] tracking-[0.3em] uppercase mt-0.5">
           19 Mayıs Stadyumu Projesi
@@ -103,7 +101,6 @@ const FixedUI = () => (
       </div>
     </header>
 
-    {/* Sağ Sosyal Medya & Scroll Text */}
     <div className="absolute right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-8 hidden md:flex pointer-events-none">
       <div className="flex flex-col gap-5">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
@@ -139,7 +136,7 @@ function EditorialCard({ section, progress }: { section: typeof SECTIONS[0]; pro
           )}
         </div>
 
-        {section.layout === "hero" && section.highlightStat && (
+        {section.highlightStat && (
           <div className="hidden md:flex flex-col items-end text-right mr-24">
             <span className="text-2xl md:text-3xl text-white font-medium">{section.highlightStat}</span>
             <span className="text-white/40 text-[10px] tracking-wider uppercase mt-1">
@@ -177,7 +174,7 @@ function EditorialCard({ section, progress }: { section: typeof SECTIONS[0]; pro
   );
 }
 
-// 3. ALT PROGRESS BAR 
+// 3. ALT PROGRESS BAR
 function TimelineProgress({ progress }: { progress: MotionValue<number>; }) {
   const activeIndexRaw = useTransform(progress, [0, 1], [1, 4.99]);
   const displayIndex = useTransform(activeIndexRaw, v => Math.floor(v));
@@ -185,7 +182,6 @@ function TimelineProgress({ progress }: { progress: MotionValue<number>; }) {
 
   return (
     <div className="absolute bottom-12 right-12 z-50 hidden md:flex items-center gap-6">
-
       <div className="text-white font-mono text-sm flex">
         <span>0</span>
         <motion.span>{displayIndex}</motion.span>
@@ -205,10 +201,6 @@ function TimelineProgress({ progress }: { progress: MotionValue<number>; }) {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   ANA BİLEŞEN
-   ═══════════════════════════════════════════════════════════════ */
-
 export default function ErnParallax() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -227,10 +219,8 @@ export default function ErnParallax() {
     <section ref={containerRef} className="relative h-[400vh] bg-[#0a0a0a] font-sans selection:bg-white selection:text-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#111]">
 
-        {/* Stüdyo Işığı Yansıması */}
         <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: "radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.8) 100%)" }} />
 
-        {/* Medya Katmanları */}
         {SECTIONS.map((section) => {
           const opacity = useTransform(smoothProgress, section.range, [0, 1, 0]);
           const scale = useTransform(smoothProgress, [section.range[0], section.range[2]], [1.0, 1.05]);
