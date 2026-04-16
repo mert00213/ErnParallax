@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 
 /* ═══════════════════════════════════════════════════════════════
-   VERİ YAPILANDIRMASI (VİDEO SIRALAMASI VE KÜÇÜK METİNLER)
+   VERİ YAPILANDIRMASI
    ═══════════════════════════════════════════════════════════════ */
 
 const SECTIONS = [
@@ -56,7 +56,7 @@ const SECTIONS = [
   },
   {
     id: "04",
-    media: "/hero_video.mp4", // <-- TARAFTARLI VİDEO EN SONA EKLENDİ
+    media: "/hero_video.mp4",
     type: "video",
     titleBold: "İç Saha",
     titleLight: "Deneyimi",
@@ -96,10 +96,21 @@ const FixedUI = () => (
       </div>
     </header>
 
-    <div className="absolute right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-10 hidden md:flex pointer-events-none opacity-40">
-      <div className="flex flex-col gap-6 scale-90">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+    {/* SAĞ SOSYAL MEDYA BARI - TWITTER (X) EKLENDİ */}
+    <div className="absolute right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-10 hidden md:flex pointer-events-none">
+      <div className="flex flex-col gap-6 scale-90 pointer-events-auto">
+        {/* Facebook */}
+        <a href="#" className="opacity-40 hover:opacity-100 transition-opacity duration-300">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        {/* Instagram */}
+        <a href="#" className="opacity-40 hover:opacity-100 transition-opacity duration-300">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        {/* Twitter (X) - Yeni Logo */}
+        <a href="#" className="opacity-40 hover:opacity-100 transition-opacity duration-300">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+        </a>
       </div>
       <div className="w-[1px] h-16 bg-white/10" />
       <span className="text-white/30 text-[8px] tracking-[0.5em] font-light [writing-mode:vertical-lr] rotate-180 uppercase">
