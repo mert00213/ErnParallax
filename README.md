@@ -31,6 +31,7 @@ This project leverages modern frontend technologies for maximum performance and 
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
+
 * Node.js (v16 or higher recommended)
 * npm or yarn
 
@@ -39,10 +40,12 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo
    ```sh
    git clone [https://github.com/mert00213/ErnParallax.git](https://github.com/mert00213/ErnParallax.git)
-   2. Navigate to the project directory
+   ```
+2. Navigate to the project directory
    ```sh
    cd ErnParallax
-   3. Install NPM packages
+   ```
+3. Install NPM packages
    ```sh
    npm install
    ```
@@ -50,14 +53,15 @@ To get a local copy up and running, follow these simple steps.
    ```sh
    npm run dev
    ```
-   📂 Project Structure
-src/components/ - Contains modular components like CustomCursor.tsx.
 
-src/App.tsx / ErnParallax.tsx - Core scrollytelling logic and data mapping.
+## 📂 Project Structure
 
-public/ - Static assets including high-res videos and ERN Holding branding.
+* `src/components/` - Contains modular components like `CustomCursor.tsx`.
+* `src/App.tsx` / `ErnParallax.tsx` - Core scrollytelling logic and data mapping.
+* `public/` - Static assets including high-res videos and ERN Holding branding.
 
-🤝 Contact
-Mert İlhan Dündar 
+## 🤝 Contact
 
-Project Link: https://github.com/mert00213/ErnParallax
+Mert İlhan Dündar
+
+Project Link: [https://github.com/mert00213/ErnParallax](https://github.com/mert00213/ErnParallax)
