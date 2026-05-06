@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# 🏟️ 19 Mayıs Stadyumu | Interactive Scrollytelling Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-end, interactive web experience designed to showcase the architectural and engineering marvel of the 19 Mayıs Stadium. Built with a focus on "luxury editorial" aesthetics and seamless scrollytelling.
 
-Currently, two official plugins are available:
+## 🌟 About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project transforms a standard architectural presentation into a cinematic journey. Inspired by hyper-car and luxury brand web experiences, it utilizes scroll-based animations to guide the user through the stadium's masterplan, architectural design, static engineering, and interior atmosphere. 
 
-## React Compiler
+Developed as part of an overarching vision for **ERN Holding**, the UI focuses on minimalism, dynamic typography, and deep immersion through video backgrounds.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+* **Cinematic Scrollytelling:** Smooth, physics-based scroll animations that transition between architectural phases.
+* **Luxury Editorial UI:** Minimalist typography, high-contrast layouts, and a sophisticated navigation system.
+* **Custom Magnetic Cursor:** An interactive, custom-built cursor featuring `mix-blend-difference` for perfect visibility across varying video backgrounds.
+* **Dynamic Media Transitions:** Seamless crossfading between high-quality video loops and architectural renders.
+* **Interactive Timeline:** A bottom-anchored dynamic progress bar indicating the user's journey through the experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Built With
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project leverages modern frontend technologies for maximum performance and fluid animations:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **[React](https://reactjs.org/)** - UI Framework
+* **[TypeScript](https://www.typescriptlang.org/)** - Static Typing
+* **[Vite](https://vitejs.dev/)** - Next Generation Frontend Tooling
+* **[Framer Motion](https://www.framer.com/motion/)** - Production-Ready Animation Library
+* **[Tailwind CSS](https://tailwindcss.com/)** - Utility-First Styling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To get a local copy up and running, follow these simple steps.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
+* Node.js (v16 or higher recommended)
+* npm or yarn
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone [https://github.com/mert00213/ErnParallax.git](https://github.com/mert00213/ErnParallax.git)
+   2. Navigate to the project directory
+   ```sh
+   cd ErnParallax
+   3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the development server
+   ```sh
+   npm run dev
+   ```
+   📂 Project Structure
+src/components/ - Contains modular components like CustomCursor.tsx.
+
+src/App.tsx / ErnParallax.tsx - Core scrollytelling logic and data mapping.
+
+public/ - Static assets including high-res videos and ERN Holding branding.
+
+🤝 Contact
+Mert İlhan Dündar 
+
+Project Link: https://github.com/mert00213/ErnParallax
